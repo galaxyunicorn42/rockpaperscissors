@@ -8,4 +8,10 @@
 
 
 // DOCUMENT READY FUNCTION BELOW
-
+$('document').ready(function() {
+$("#shoot").click(function(){
+    let input= $("#input").val();
+    $("#userChoice").text(input);
+    console.log(input);
+});
+});
