@@ -12,17 +12,15 @@ let userChoice =""
 let computerChoice =""
 let randomChoice =0
 $('document').ready(function() {
- randomChoice= math.random();
+ randomChoice= Math.random();
 $("#shoot").click(function(){
     let input= $("#input").val();
     $("#userChoice").text(input);
     console.log(input);
-});
-});
-if(randomNumber>.66){
+    if(randomChoice>.66){
     computerChoice= "rock";
 }
-else if(randomNumber>.33){
+else if( randomChoice>.33){
     computerChoice ="paper";
 }
 else{
@@ -33,7 +31,16 @@ $("#computerChoice").html(computerChoice);
 if (userChoice === computerChoice){
     console.log("tied")
     $("#result").html("tied!");
+    
 }
+else if(userChoice==="rock"&&computerChoice==="paper" ){
+  $("#result").html("computer wins")
+}
+else if(userChoice==="scissors"&&computerChoice==="rock"){
+  $('#result').html("computer wins")
+}
+else if(userChoice==="scissors"&&computerChoice==="paper"){
 
-
-
+}
+});
+});
